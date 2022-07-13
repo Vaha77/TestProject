@@ -1,0 +1,10 @@
+.wheel {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  background-color: red;
+  /* transform: translate(-50%, -50%); */
+}

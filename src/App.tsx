@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./index.css";
+import { vzrosli, rebyonk } from "./data/data";
+import Wheel from "./slider/Wheel";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="contatiner">
+      <div className="wrepper">
+        <h1 className="title">А вдруг СМА?</h1>
+        <p className="subtitle">Выберите, кто Ваш пациент:</p>
+
+        <div className="cont">
+          <div className="item">
+            <h1 className="category">Взрослый</h1>
+
+            {vzrosli.map((item, i) => {
+              return (
+                <div key={i}>
+                  <div className="baner">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="info">{item.title}</div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="item">
+            <h1 className="category">Ребенок</h1>
+            {rebyonk.map((item, i) => {
+              return (
+                <div>
+                  <div className="baner">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="info">{item.title}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <Wheel />
+      </div>
     </div>
   );
 }
