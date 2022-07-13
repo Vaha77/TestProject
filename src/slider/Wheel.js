@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import Card from "./card";
 import "./style.css";
 export class Wheel extends Component {
   constructor(props) {
